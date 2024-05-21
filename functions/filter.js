@@ -1,16 +1,11 @@
-function filterArray(arr) {
+let filterArray = (arr) => {
     let result = []
-    for (let i = 0; i < arr.length; i++) {
-        let word = arr[i]
-        if (word.endsWith('er')) {
-            result.push(word)
+    for (let el of arr) {
+        if (el.endsWith('er')) {
+            result.push(el)
         }
     }
     return result
 }
 
-let newArray = [slate, rather, brother, geschlossen]
-
-console.log(filterArray(newArray))
-
-module.exports = filterArray
+module.exports = filterArray 
