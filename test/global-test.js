@@ -2,8 +2,8 @@ const chai = require('chai')
 const expect = chai.expect;
 
 const Num = require('../functions/class')
-const filter = require('../functions/filter')
-const reverse = require('../functions/reverse')
+const filterArray = require('../functions/filter')
+const reversedArray = require('../functions/reverse')
 
 
 
@@ -24,8 +24,15 @@ describe('class', () => {
 })
 describe('filter', () => {
     it('should return a new array of words that end in "er"', () => {
-        let newArr = [slate, rather, brother, geschlossen]
+        let newArr = ['slate', 'rather', 'brother', 'geschlossen']
 
-        expect(filterArray(newArr)).to.equal([rather, brother])
+        expect(filterArray(newArr)).to.eql(['rather', 'brother'])
+    })
+})
+describe('reverse', () => {
+    it('return a new array with the words all reversed', () => {
+        let arr = ['slate', 'rather', 'brother', 'open']
+
+        expect(reversedArray(arr)).to.eql(['etals', 'rehtar', 'rehtorb', 'nepo'])
     })
 })
